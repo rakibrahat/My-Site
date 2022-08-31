@@ -13,7 +13,7 @@ body {
     width: 100%;
     margin: auto;
     background-color: #013853c9;
-    position: fixed;
+    position: sticky;
     text-align: center;
 }
 
