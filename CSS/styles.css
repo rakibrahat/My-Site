@@ -65,11 +65,7 @@ nav img {
     visibility: visible;
 }
 
-#menuIcon {
-    display: none;
-}
-
-#crossIcon {
+.fa {
     display: none;
 }
 
