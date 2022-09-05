@@ -4,166 +4,129 @@
     /* border: 1px solid black; */
 }
 
-body {
-    background-color: #242F9B;
-    height: 120vh;
+body{
+    background-color: white;
 }
 
-.navbar {
+.top-container {
+    min-height: 100vh;
     width: 100%;
-    margin: auto;
-    background-color: #013853c9;
-    position: fixed;
-    text-align: center;
+    background-image: linear-gradient(#00000085, #00000095), url('../Images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-.nav-section {
-    text-transform: uppercase;
+nav {
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 40px;
+}
+
+.navbar{
+    flex: 1;
+    text-align: right;
 }
 
 .nav-section li {
     list-style: none;
     display: inline-block;
-    margin: 25px 10px;
-    text-align: center;
+    padding: 8px 10px;
+    position: relative;
 }
 
 .nav-section li a {
+    text-transform: uppercase;
     text-decoration: none;
-    display: block;
-    font-size: 0.9375rem;
-    font-family: montserrat;
-    color: #def4ff;
-    width: 200px;
-    padding: 5px 0;
-    transition: all 1s;
-    border-radius: 3px;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -ms-transition: all 1s;
-    -o-transition: all 1s;
-}
-
-.nav-section li a:hover {
     color: white;
-    background-image: linear-gradient(to left, #895cf2, #895cf2, #ffabf4);
-    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-    background-position: right center;
+    font-size: 0.9rem;
+    font-family: montserrat;
 }
 
-.top-container {
-    background: linear-gradient(#bffcfc54, #5ac3f759), url('../Images/bg-image.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 60%;
+.nav-section li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #f93002;
+    display: block;
+    margin: auto;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.nav-section li:hover::after {
     width: 100%;
+    visibility: visible;
+}
+
+nav .fa{
+    display: none;
 }
 
 .texts {
-    width: 40%;
-    position: relative;
-    top: 40%;
-    margin: 0 auto;
+    width: 90%;
+    color: white;
+    margin: 23vh auto;
+    text-align: center;
 }
 
 .texts h1 {
     font-size: 5rem;
     font-family: 'Great Vibes', cursive;
-    color: #e7f6ff;
+    padding: 3vh 3vh;
     text-align: center;
 }
 
 .texts p {
     font-size: 1.875rem;
-    color: #e7f6ff;
+    color: #ff6a00;
     font-family: poppins;
     text-align: center;
-}
-
-.middle-container {
-    width: 100%;
-}
-
-.me {
-    width: 100%;
-    height: 50%;
-    margin: 0 auto;
-    padding: 50px 0 130px 0;
-    background: #4B778D;
-}
-
-.profile {
-    width: 30%;
-    height: 25vh;
-    margin: 0 auto;
-    padding: 0px 0 50px 0;
-    border: 1px solid white;
-    border-radius: 10px;
-    margin-top: 100px;
-}
-
-.profile img {
-    height: 200px;
-    width: 200px;
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    bottom: 105px;
-}
-
-.profile h2 {
-    width: 40%;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 20px auto;
-    font-family: montserrat;
-    display: block;
-    position: relative;
-    color: #efffc3;
-    bottom: 100px;
-}
-
-.profile p {
-    width: 55%;
-    text-align: center;
-    font-family: poppins;
-    line-height: 19px;
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    color: #daffe6;
-    bottom: 100px
 }
 
 .skills {
     width: 100%;
-    height: 80vh;
-    background-color: #5085a0;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .skills h2 {
     font-size: 3.125rem;
     font-family: ubuntu;
-    color: white;
+    color: #e36613;
     padding: 50px 0 80px 0;
     text-align: center;
 }
 
+#skill-row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
 .skill-row {
-    width: 25%;
-    background-color: #75a4bb;
-    border: 1px solid #75a4bb;
+    width: 20%;
+    background-color: #ff6200;
+    border: 1px solid #ff6200;
     border-radius: 5px;
-    margin-left: 400px;
-    float: left;
+    margin: 0 100px;
 }
 
 .skill-image {
-    width: 240px;
-    height: 240px;
+    width: 85%;
+    height:25vh;
     display: block;
     margin: 20px auto 10px auto;
-    border: 1px solid #def7ef;
     border-radius: 2px;
 }
 
@@ -173,17 +136,17 @@ body {
     font-size: 1.5625rem;
     margin: 10px auto;
     font-family: montserrat;
-    color: #def7ef;
+    color: white;
 }
 
 .skill-row p {
     width: 90%;
     text-align: center;
     margin: 0 auto;
-    font-size: 0.875rem;
-    padding: 0px 15px 20px 15px;
+    font-size: 0.8rem;
+    padding: 0 0 1vh 0;
     font-family: montserrat;
-    color: #e9fffa;
+    color: white;
 }
 
 .skill-row-2 {
@@ -338,3 +301,83 @@ body {
     color: #819dac;
     display: block;
 }
+
+@media (max-width: 700px){
+    .top-container {
+        min-height: 80vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    
+    nav{
+        padding-top: 15px;
+    }
+    
+    .navbar {
+        position: absolute;
+        height: 100vh;
+        width: 180px;
+        background: #f95d02;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: all 0.5s;
+    }
+    
+    .navbar ul{
+        display: block;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    
+    .navbar ul li {
+        display: block;
+    }
+    
+    .navbar ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 0.9rem;
+    }
+    
+    nav .fa{
+        display: block;
+        font-size: 22px;
+        color: white;
+        margin: 15px;
+        cursor: pointer;
+    }
+    
+    .texts {
+        width: 90%;
+        color: white;
+        text-align: center;
+        margin: 20vh auto;
+    }
+    
+    .texts h1 {
+        font-size: 3rem;
+        padding: 1vh 0;
+    }
+    
+    .texts p {
+        width: 95%;
+        font-size: 1rem;
+    }
+    
+    #skill-row{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .skill-row {
+        width: 70%;
+        margin-bottom: 50px;
+    }
+    }
